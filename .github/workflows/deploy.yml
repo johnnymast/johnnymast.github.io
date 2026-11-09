@@ -21,7 +21,7 @@ concurrency:
 
 defaults:
   run:
-    working-directory: public
+    working-directory: .
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/public
+          path: ./public
 
   deploy:
     environment:
